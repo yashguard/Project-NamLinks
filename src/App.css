@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.bg h1 {
+  font-size: 100px;
+  font-weight: 900;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+nav {
+  width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 100px;
+}
+
+nav .navLinks {
+  display: flex;
+  gap: 100px;
+}
+
+nav .link {
+  color: white;
+  text-decoration: none;
+  padding: 25px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav .link:hover {
+  color: cyan;
+}
+
+/* home section */
+
+section {
+  padding-top: 150px;
+}
+
+section img {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+section h1 {
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgb(0, 164, 164);
+}
+
+section p {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin: 15px 0;
+  text-align: justify;
+}
+
+section h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+section .link {
+  padding: 10px 24px;
+  margin-right: 25px;
+  border: 1px solid rgb(0, 164, 164);
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+section .link:hover {
+  background-color: rgb(0, 164, 164);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+section .login {
+  background-color: rgb(0, 164, 164);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section .login:hover {
+  background-color: transparent;
+  color: black;
+}
+
+/* signup page */
+.form {
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  padding-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.form form {
+  color: white;
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0px 0px 20px black;
+}
+
+.form form label {
+  width: 40%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form form input {
+  width: 60%;
+  padding: 3px 0;
+  margin-bottom: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  outline: none;
+  padding-left: 20px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.form form input:focus {
+  border-color: white;
+}
+
+.form form #submit {
+  padding: 0;
+  width: fit-content;
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin: 70px auto 0;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+}
+
+.form form #submit:hover {
+  background-color: white;
+  color: black;
 }
